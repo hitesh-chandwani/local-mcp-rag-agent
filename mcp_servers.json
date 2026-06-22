@@ -1,0 +1,20 @@
+{
+  "servers": [
+    {
+      "_comment": "Example: filesystem MCP server (stdio) — exposes local file read/write/list tools",
+      "name": "filesystem",
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/tmp"]
+    },
+    {
+      "_comment": "Example: remote SSE server — replace URL and remove this entry if not needed",
+      "name": "my-remote-server",
+      "transport": "sse",
+      "url": "http://localhost:3001",
+      "headers": {
+        "Authorization": "Bearer ${MY_SERVER_TOKEN}"
+      }
+    }
+  ]
+}
